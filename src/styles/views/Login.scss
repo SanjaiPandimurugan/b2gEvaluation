@@ -1,0 +1,67 @@
+@import "../theme";
+
+.login {
+  &.container {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    @include center;
+    flex-direction: column;
+  }
+  &.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
+    max-width: 30em;
+    padding: 2em 37px;
+    font-size: 16px;
+    font-weight: 300;
+    border-radius: 0.75em;
+    background-color: $background;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    box-shadow: $dropShadow;
+  }
+  &.field {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 1em;
+  }
+  &.input {
+    height: 35px;
+    padding-left: 15px;
+    margin-left: -4px;
+    border: none;
+    border-radius: 0.75em;
+    margin-bottom: 0.5em;
+    background: transparentize(white, 0.85);
+    color: $textColor;
+
+    &[type="date"] {
+      padding-right: 15px;
+      &::-webkit-calendar-picker-indicator {
+        filter: invert(1);
+      }
+    }
+  }
+  &.label {
+    color: $textColor;
+    margin-bottom: 0.5em;
+    text-transform: lowercase;
+    font-weight: 300;
+  }
+  &.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+  }
+
+  select.input {
+    appearance: none;
+    padding-right: 30px;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 20px;
+  }
+}

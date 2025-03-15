@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+  }
+
+  body {
+    background: #202b38 !important;
+    color: #ffffff !important;
+  }
+
+  .top-nav {
+    background: #1a242f;
+  }
+
+  .ai-card {
+    background: #1a242f;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color-scheme: light;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+
+  .top-nav {
+    background: #f5f5f5;
+  }
+
+  .ai-card {
+    background: #f5f5f5;
+    color: #000;
+  }
+}
+
+/* Top Navigation Bar */
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
+}
+
+
+.timer-display {
+  font-weight: 600;
+}
+
+.next-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #6a9ff9;       
+  color: #000;               
+  padding: 0.8em 1.6em;
+  border-radius: 6px;
+  border: 1px solid #6a9ff9;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: background 0.3s, border-color 0.3s, opacity 0.3s;
+}
+
+@media (prefers-color-scheme: dark) {
+  .next-btn {
+    background: #6a5af9;    
+    color: #fff;            
+    border-color: #6a5af9;
+  }
+}
+
+.next-btn.disabled {
+  background: transparent;
+  border: 1px solid transparent;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Submission & AI Cards */
+.content-area {
+  display: flex;
+  flex: 1;
+  padding: 20px;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+/* Submission Column */
+.submission-column {
+  flex: 1.5;
+}
+
+.submission-card {
+  max-width: 100%;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.submission-card img {
+  max-width: 75%;
+  height: auto;
+}
+
+img {
+  max-width: 75%;
+  height: auto;
+  display: block;
+  margin: 15px auto;
+}
+
+/* AI Evaluation Column */
+.evaluation-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.recommendation-title {
+  text-align: center;
+  width: 100%;
+  margin-top: 1px;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+}
+
+/* AI Cards */
+.ai-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.ai-card {
+  border-radius: 8px;
+  padding: 15px;
+  max-height: 375px;
+  overflow-y: auto;
+}
+
+/* Decision Block */
+.decision-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.decision-label {
+  font-weight: 600;
+  font-size: 1.2em;
+}
+
+.button-group {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Pass/Fail Buttons - Non Active State */
+.pass-btn,
+.fail-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0f0f0;
+  color: #000;
+  padding: 0.8em 1.6em;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: background 0.3s, border-color 0.3s;
+}
+
+/* Pass/Fail Buttons*/
+.pass-btn.active {
+  background: linear-gradient(135deg, #3db56c 0%, #2ba053 100%);
+  border: none;
+}
+
+.fail-btn.active {
+  background: linear-gradient(135deg, #e53935 0%, #c62828 100%);
+  border: none;
+}
+
+/* Dark mode for Pass/Fail Buttons */
+@media (prefers-color-scheme: dark) {
+  .pass-btn,
+  .fail-btn {
+    background: #333;    
+    color: #fff;
+    border-color: #555;
+  }
+}
+
+
+.confidence-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.likert-scale {
+  display: flex;
+  gap: 10px;
+}
+
+.confidence-btn {
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 60px;  
+  border: 1px solid #ccc;
+  background: #f0f0f0;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: 600;
+  text-align: center;
+  transition: background 0.3s, border-color 0.3s;
+  white-space: pre-line;
+}
+
+@media (prefers-color-scheme: dark) {
+  .confidence-btn {
+    background: #333;
+    color: #fff;
+    border-color: #555;
+  }
+}
+
+.confidence-btn.active {
+  background: #6a5af9;
+  color: #fff;
+  border-color: #6a5af9;
+}
+
+
+/* Alert Popup */
+.alert-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(2px);
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.alert-box {
+  background: #fff;
+  color: #333;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  width: 300px;
+}
+
+.alert-box button {
+  margin-top: 10px;
+  background: linear-gradient(135deg, #6a5af9 0%, #7871f2 100%);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}

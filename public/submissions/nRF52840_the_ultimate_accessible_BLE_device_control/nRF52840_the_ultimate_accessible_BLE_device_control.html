@@ -1,0 +1,189 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css"><link rel="stylesheet" href="../custom.css"><div class="middle-column">
+ <section id="overview">
+  <h1 class="hckui__typography__h1" itemprop="name">
+   nRF52840 the ultimate accessible BLE device control
+  </h1>
+  <p class="hckui__typography__bodyL hckui__layout__marginBottom15" itemprop="description">
+   People with mobility impairments often struggle to interact with devices. We need a low-cost accessible and adaptable tool.
+  </p>
+  <div class="hckui__layout__marginTop30">
+   <div class="hckui__layout__hiddenMedUp">
+   </div>
+   <div class="project-cover-image" itemprop="image" itemscope="" itemtype="https://schema.org/ImageObject">
+    <meta content="https://hackster.imgix.net/uploads/attachments/1697895/_08wAznZiNb.blob?auto=compress&amp;w=900&amp;h=675&amp;fit=min&amp;fm=jpg" itemprop="url"/>
+    <meta content="900" itemprop="width"/>
+    <meta content="675" itemprop="height"/>
+    <img alt="nRF52840 the ultimate accessible BLE device control" src="4.jpg"/>
+   </div>
+  </div>
+ </section>
+ <div class="project-section-break">
+ </div>
+ <div id="project_page_simple_ad_portal">
+ </div>
+ <div id="description" itemprop="articleBody">
+  <section id="story">
+   <div class="project-section-title">
+    <h2 class="hckui__typography__h2 title-with-anchor">
+     <span>
+      Story
+     </span>
+    </h2>
+   </div>
+   <div class="project-story collapsible-section collapsed hljs-active hljs-monokai" itemprop="text">
+    <p class="hckui__typography__bodyL">
+     People with mobility impairments often struggle to interact with computers, tablets, and phones, limiting their access to communication, information, and entertainment. A low-cost, open-source, customizable HID (Human Interface Device) can address this challenge, acting as a keyboard and mouse, and even performing finger taps and swipes to ensure everyone can participate in the digital world.
+    </p>
+    <p class="hckui__typography__bodyL">
+     This project offers solutions for individuals with motor impairments ranging from mild to extensive. The project consists of two parts: 1. A device that is adaptable to allow the user to control digital devices with minimal head movements and switch inputs based on type of motor impairment. 2. An eye gaze controlled application that allows users who only have the ability to move their eyes to control their phones and play PC video games (I will use the game Starfield as it's popular and is a good example of how the application handles complex game play). The range of solutions in this project were developed to allow individuals with progressive conditions such as ALS to never lose their ability to access technology.
+    </p>
+    <p class="hckui__typography__bodyL">
+     The central piece of hardware is the Nordic Systems nRF52840. This low-cost device is amazing and opens a world of possibilities to those with motor impairments.
+    </p>
+    <p class="hckui__typography__bodyL">
+     The first part of the project is to create a low-cost human interface device (HID) that enables people with motor impairments to control phones and computers. Basically, a mouse that requires very limited head movements to operate.
+    </p>
+    <p class="hckui__typography__bodyL">
+     The device uses a gyroscope mounted to an earpiece to track head movements (very little movement required) and move a mouse pointer accordingly. The device has 4 optional switch / button inputs (3.5mm headphone jack) for use with any switches that the user can control.
+    </p>
+    <p class="hckui__typography__bodyL">
+     left: works the same as the left click button on a regular mouse
+    </p>
+    <p class="hckui__typography__bodyL">
+     right: works the same as the right click button on a regular mouse
+    </p>
+    <p class="hckui__typography__bodyL">
+     scroll: tap to scroll down and long press to scroll up
+    </p>
+    <p class="hckui__typography__bodyL">
+     dwell: tap to to toggle dwell clicking on and off. Dwell clicking is where the device will left click/tap when the pointer is stationary for a specified time. Being able to turn this feature on and off really helps the user from going crazy when the mouse constantly clicks.
+    </p>
+    <div class="carousel-images">
+     <img class="carousel-image" src="0.jpg"/>
+    </div>
+    <div class="carousel-images">
+     <img class="carousel-image" src="1.jpg"/>
+    </div>
+    <p class="hckui__typography__bodyL">
+     The device uses an Adafruit Feather Express Nordic nRF52840 and an IMU module to act as a Bluetooth low energy mouse. Please see the bill of materials for details. The case and gyro cover are 3d printed. The STL and STEP files are included.
+    </p>
+    <p class="hckui__typography__bodyL">
+     The Nordic nRF52840 is an amazing device and the Adafruit implementation of it is awesome. Thanks Adafruit for the wonderfully easy to use libraries!
+    </p>
+    <p class="hckui__typography__bodyL">
+     An instruction manual for building the device is included.
+    </p>
+    <p class="hckui__typography__bodyL">
+     Wheelchairs vary but I have included the print and CAD files for the swing-away head mounts and finger mounts with a protective guard. These mounts should fit recent permobil wheelchairs.
+    </p>
+    <div class="carousel-images">
+     <img class="carousel-image" src="2.jpg"/>
+    </div>
+    <div class="carousel-images">
+     <img class="carousel-image" src="3.jpg"/>
+    </div>
+    <p class="hckui__typography__bodyL">
+     <span>
+      The software has to be uploaded to the nRF52840. Platformio is recommended. Here is a link to the setup instructions:
+     </span>
+     <a class="hckui__typography__linkBlue" data-ha='{"eventName":"Clicked link","customProps":{"value":"https://platformio.org/install/ide?install=vscode","href":"https://platformio.org/install/ide?install=vscode","type":"story","location":"story"},"clickOpts":{"delayRedirect":true}}' href="https://platformio.org/install/ide?install=vscode" rel="nofollow">
+      https://platformio.org/install/ide?install=vscode
+     </a>
+    </p>
+    <p class="hckui__typography__bodyL">
+     <span>
+      An Android App that performs swipe gestures when clicked can be found here
+     </span>
+     <a class="hckui__typography__linkBlue" data-ha='{"eventName":"Clicked link","customProps":{"value":"https://github.com/madcrow99/AndroidMousePointerSwipeGestures ","href":"https://github.com/madcrow99/AndroidMousePointerSwipeGestures","type":"story","location":"story"},"clickOpts":{"delayRedirect":true}}' href="https://github.com/madcrow99/AndroidMousePointerSwipeGestures" rel="nofollow">
+      https://github.com/madcrow99/AndroidMousePointerSwipeGestures
+     </a>
+     <span>
+      This is quite helpful for navigating an android device while dwell clicking.
+     </span>
+    </p>
+    <div class="embed-frame">
+     <figure class="youtube">
+      <iframe allowfullscreen="" frameborder="0" height="500" src="//www.youtube.com/embed/dj8lNFKD49U?rel=0" style="margin: 10px auto; display: block;" width="75%">
+      </iframe>
+     </figure>
+    </div>
+    <p class="hckui__typography__bodyL">
+     <br/>
+    </p>
+   </div>
+  </section>
+  <div class="project-section-break">
+  </div>
+  <section id="cad">
+   <div class="project-section-title">
+    <h2 class="hckui__typography__h2 title-with-anchor">
+     <span>
+      Custom parts and enclosures
+     </span>
+    </h2>
+   </div>
+   <div class="project-attachment">
+    <div class="header">
+     <div class="text">
+      <h3 class="hckui__typography__h3">
+       Gyro Mouse
+      </h3>
+     </div>
+    </div>
+    <a href="https://github.com/madcrow99/BLE-Gyro-HID">
+     Github
+    </a>
+   </div>
+  </section>
+  <div class="project-section-break">
+  </div>
+  <section id="schematics">
+   <div class="project-section-title">
+    <h2 class="hckui__typography__h2 title-with-anchor">
+     <span>
+      Schematics
+     </span>
+    </h2>
+   </div>
+   <div class="project-attachment">
+    <div class="header">
+     <div class="text">
+      <h3 class="hckui__typography__h3">
+       Gyro Mouse
+      </h3>
+     </div>
+    </div>
+    <a href="https://github.com/madcrow99/BLE-Gyro-HID">
+     Github
+    </a>
+   </div>
+  </section>
+  <div class="project-section-break">
+  </div>
+  <section id="code">
+   <div class="project-section-title">
+    <h2 class="hckui__typography__h2 title-with-anchor">
+     <span>
+      Code
+     </span>
+    </h2>
+   </div>
+   <div class="project-attachment">
+    <div class="header">
+     <div class="text">
+      <h3 class="hckui__typography__h3">
+       Gyro Mouse
+      </h3>
+     </div>
+    </div>
+    <a href="https://github.com/madcrow99/BLE-Gyro-HID">
+     Github
+    </a>
+   </div>
+  </section>
+  <div class="project-section-break">
+  </div>
+  <div class="project-section-break">
+  </div>
+ </div>
+</div>

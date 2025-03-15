@@ -1,0 +1,10 @@
+pre {
+    overflow-x: auto;
+    /* Enables horizontal scrolling */
+    overflow-y: auto;
+    /* Enables vertical scrolling */
+    white-space: pre;
+    /* Keeps formatting */
+    max-height: 400px;
+}
+
