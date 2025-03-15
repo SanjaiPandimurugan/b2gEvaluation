@@ -24,7 +24,7 @@ const Tutorial: React.FC = () => {
           <iframe
             width="100%"
             height="450"
-            src="https://www.youtube.com/watch?v=yIjDET3k06A" // Change to actual video
+            src="https://www.youtube.com/embed/yIjDET3k06A" // Changed from watch URL to embed URL
             title="Tutorial Video"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
